@@ -19,13 +19,6 @@ def wine_decision(wine_type, score, price):
   en_wine, en_score, en_price = le.fit_transform(df.wine), le.fit_transform(df.score), le.fit_transform(df.price)
   en_bought = le.fit_transform(df.bought)
 
-
-  transl = {
-    "Red": 0, 'White': 1,
-    "High": 0, 'Low': 1,
-    "Yes": 0, 'No': 1,
-  }
-
   features = list(zip(en_wine, en_score, en_price))
 
   X = np.array(features)
